@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+}
+
+/*Colors*/
+.black {
+    color: #3f3f3f;
+
+}
+
+.white {
+    color: white;
+
+}
+
+/*Fonts*/
+
+
+.bold {
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.italic {
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: italic;
+    padding-bottom: 15px;
+}
+
+.menu {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+h2 {
+    font-size: 70px;
+}
+
+h3 {
+    font-size: 45px;
+}
+
+.sentence {
+    font-size: 50px;
+
+}
+
+
+
+/*Header*/
+
+header {
+    display: flex;
+    min-height: 530px;
+    justify-content: center;
+    align-content: center;
+
+}
+
+nav {
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    z-index: 100;
+}
+
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: flex;
+    flex-flow: row;
+    list-style-type: none;
+    gap: 40px;
+
+}
+
+li a {
+    text-decoration: none;
+    color: #3f3f3f;
+    transition: all 0.2s ease-in-out;
+}
+
+.myVideo {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Full height of the viewport */
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.myVideo video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure the video covers the entire area */
+    z-index: -1;
+    /* Place the video behind the text */
+}
+
+
+#intro {
+    position: absolute;
+
+    text-align: center;
+    color: white;
+    /* Ensure the text is visible */
+    z-index: 1;
+    /* Place the text above the video */
+    padding: 0 20px;
+    text-shadow: black 1px 0 50px;
+}
+
+
+main {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+
+}
+
+/*Presentation*/
+#presentation {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    padding: 100px 20px 0 20px;
+    gap: 120px;
+    align-items: center;
+    width: 100%;
+}
+
+#presentation h3 {
+    max-width: 960px;
+}
+
+h3 a {
+    color: #3f3f3f;
+}
+
+.imgpres {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    gap: 16px;
+}
+
+.imgpres img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+/*Quote*/
+#quote {
+    display: flex;
+    background-color: #3f3f3f;
+    padding: 80px 20px 80px 8%;
+    justify-content: center;
+
+
+}
+
+#quote img {
+    height: 100%;
+    width: auto;
+}
+
+#quote .sentence,
+#quote .menu {
+    position: relative;
+    max-width: 960px;
+    left: -50px;
+
+}
+
+
+
+/*Invitacion*/
+#invitation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 70px;
+    padding-bottom: 100px;
+}
+
+.imginv {
+    display: flex;
+    
+}
+
+.row {
+    display: flex;
+    
+}
+
+.row img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.textinv {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+
+@media only screen and (min-width:961px) {
+    .imginv {
+        flex-flow: row;
+    }
+}
+
+@media only screen and (min-width:780px) and (max-width:960px) {
+  
+    .imginv {
+        flex-flow: column;
+    }
+
+}
+
+
+@media only screen and (min-width:320px) and (max-width:779px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 45px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .sentence {
+        font-size: 30px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .imginv {
+        flex-flow: column;
+    }
+    .row {
+        flex-flow: column;
+
+    }
+    .imgpres {
+        flex-flow: column;
+    }
+    .textinv {
+        gap: 20px;
+    }
+
+
+}
